@@ -9,7 +9,7 @@ public class TMImporterSetting
 
 
     //texture属性
-    public TextureImporterType Tex_ImporterType = TextureImporterType.Image;
+    public TextureImporterType Tex_ImporterType = TextureImporterType.Default;
     public bool bChanged_ImporterType = false;
 
     public SpriteImportMode Tex_SpriteImport    = SpriteImportMode.None;
@@ -121,7 +121,7 @@ public class TMImporterSetting
     {
         bEnableImportSetting = false;
 
-        Tex_ImporterType        = TextureImporterType.Image;
+        Tex_ImporterType        = TextureImporterType.Default;
         Tex_SpriteImport        = SpriteImportMode.None;
         Tex_SetReadable         = false;
         Tex_generateCubemap     = TextureImporterGenerateCubemap.None;

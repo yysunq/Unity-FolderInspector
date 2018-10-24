@@ -24,7 +24,7 @@ using LitJson;
 [CustomEditor(typeof(UnityEngine.Object),true)]
 public class FolderEditor : Editor 
 {
-	static int beginIndex = Application.dataPath.Length - 6;
+	static int beginIndex = 0;
 
 	public bool bModelImport        = true;
 	public bool bTextureImport      = true;
@@ -41,7 +41,9 @@ public class FolderEditor : Editor
 	public override void OnInspectorGUI()
 	{
         base.OnInspectorGUI();
-		if (target == null)
+        beginIndex = Application.dataPath.Length - 6;
+
+        if (target == null)
 		{
 			return;
 		}
